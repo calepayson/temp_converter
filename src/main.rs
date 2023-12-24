@@ -1,7 +1,8 @@
 use std::io;
 
 fn main() {
-    println!("Please input a temperature: ");
+
+    println!("Temp: ");
 
     let mut temp = String::new();
 
@@ -11,10 +12,10 @@ fn main() {
 
     println!("You input: {temp}");
 
-    // let temp: u32 = match temp.trim().parse() {
-    //     Ok(num) => num,
-    //     Err(_) => continue,
-    // };
+    let temp: u32 = temp
+        .trim()
+        .parse()
+        .expect("Please type a number");
 
-    // println!("You")
+    println!("Twice your temp is: {}", temp * 2);
 }
